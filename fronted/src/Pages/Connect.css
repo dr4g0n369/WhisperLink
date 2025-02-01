@@ -1,0 +1,153 @@
+.Connect {
+    background-color: rgb(10, 41, 41);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+}
+.Content {
+    position: absolute;
+    height: 100dvh;
+   
+    left: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    width: 40%;
+    h1 {
+        color: rgb(211, 130, 25);
+        font-size: 3rem;
+        margin: 0;
+        text-align: center;
+        font-family: "Prosto One", serif;
+        font-weight: 700;
+        font-style: normal;
+
+    }
+    p {
+        color: white;
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 2vw;
+        text-align: center;
+        font-family: "Turret Road", serif;
+        font-weight: 200;
+        font-style: normal;
+    }
+    .Buttons {
+        display: flex;
+        
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+    button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        color: rgb(43, 112, 112);
+        border: none;
+        padding: 1rem;
+        font-size: 1rem;
+        margin-top: 1rem;
+        cursor: pointer;
+        font-family: "Prosto One", serif;
+        font-weight: 400;
+        font-style: normal;
+        border: 1px solid rgb(23, 83, 92);
+        border-radius: 10px;
+        height: 100px;
+        width: 40%;
+        background: rgb(11, 43, 48);
+        backdrop-filter: blur(10px);
+        img {
+            width: 50%;
+            height: 50%;
+            padding: 0.5vw;
+            stroke: rgb(43, 112, 112);
+            fill: rgb(43, 112, 112);
+        }
+    }
+    button:hover {
+        background-color: rgb(20, 54, 54);
+        color: white;
+        transform: scale(1.05);
+        transition: transform 0.2s;
+    }
+    a {
+        text-decoration: none;
+        padding: 2vw;
+        color: rgb(35, 35, 131);
+        font-family: "Prosto One", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    input {
+        width: 80%;
+        height: 50px;
+        border: none;
+        border-bottom: 1px solid rgb(23, 83, 92);
+        border-radius: 10px;
+        padding: 1rem;
+        margin-top: 3vw;
+        font-size: 1.5rem;
+        text-align: center;
+        font-family: "Prosto One", serif;
+        font-weight: 400;
+        font-style: normal;
+        background: transparent;
+        color: white;
+       
+    }
+    input::placeholder {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+.Back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0vw;
+    font-size: 40vw;
+    text-align: center;
+    filter: blur(20px);
+    width: 100vw;
+    height: 100%;
+    color: rgba(22, 68, 71, 0.404);
+    font-family: "Prosto One", serif;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+}
+@media (max-width: 700px) {
+    .Content {
+        width: 100%;
+        left: 0;
+        h1 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+        .Buttons {
+            flex-direction: column;
+            button {
+                width: 80%;
+                height: 100px;
+            }
+        }
+
+    }
+    .Back{
+        display: none;
+    }
+}

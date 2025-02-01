@@ -1,0 +1,72 @@
+.Nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #143e42;
+    width: 100vw;
+    height: 7%;
+    z-index: 100;
+
+}
+.Logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 1vw;
+    font-size: 1.5rem;
+    width: 10%;
+    font-family: "Rubik Glitch", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(93, 236, 255);
+}
+.Right  {
+    position: absolute;
+    right: 5vw;
+    top: 0;
+    margin: 1vw;
+    width: 40%;
+    ul {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0;
+
+        li {
+            text-decoration: none;
+            list-style: none;
+            color: rgb(68, 173, 159);
+            font-size: 1.1rem;
+            cursor: pointer;
+           
+            font-family: "Noto Sans", serif;
+            font-optical-sizing: auto;
+            font-weight:600;
+            font-style: normal;
+            font-variation-settings:
+              "wdth" 100;
+            
+        }
+        li:hover {
+            color: rgb(16, 87, 71);
+            transform: scale(1.07);
+        }
+    }
+}
+@media (max-width: 700px) {
+ 
+    .Logo {
+        font-size: 1.5rem;
+    }
+    .Right {
+        width: 60%;
+        ul {
+            li {
+               
+            }
+        }
+    }
+    
+}
