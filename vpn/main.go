@@ -16,6 +16,17 @@ type requestData struct {
 }
 
 func buildClientHandler(w http.ResponseWriter, r *http.Request) {
+	// Set CORS headers
+	w.Header().Set("Access-Control-Allow-Origin", "*") // Allow all origins
+	w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS") // Allow specific methods
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type") // Allow content-type header
+
+	// Handle preflight requests
+	if r.Method == "OPTIONS" {
+		w.WriteHeader(http.StatusOK)
+		return
+	}
+
 	var data requestData
 	if r.Header.Get("Content-Type") != "application/json" {
 		http.Error(w, "Content-Type must be application/json", http.StatusBadRequest)
@@ -59,7 +70,20 @@ func buildClientHandler(w http.ResponseWriter, r *http.Request) {
 	defer os.Remove(filepath.Join(cmd.Dir, "client"))
 }
 
+
+
 func buildServerHandler(w http.ResponseWriter, r *http.Request) {
+	// Set CORS headers
+	w.Header().Set("Access-Control-Allow-Origin", "*") // Allow all origins
+	w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS") // Allowed methods
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type") // Allowed headers
+
+	// Handle preflight requests
+	if r.Method == "OPTIONS" {
+		w.WriteHeader(http.StatusOK)
+		return
+	}
+
 	var data requestData
 	if r.Header.Get("Content-Type") != "application/json" {
 		http.Error(w, "Content-Type must be application/json", http.StatusBadRequest)
@@ -102,6 +126,7 @@ func buildServerHandler(w http.ResponseWriter, r *http.Request) {
 
 	defer os.Remove(filepath.Join(cmd.Dir, "server"))
 }
+
 
 func main() {
 	http.HandleFunc("/api/client", buildClientHandler)

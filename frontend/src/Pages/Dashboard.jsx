@@ -43,7 +43,8 @@ function Dashboard() {
         }
     };
     const download = async (node) => {
-     const ip = `${node.ip}:8080`;
+     const ip = `${node.server}`;
+     console.log(ip);
      try {
           const response = await fetch("http://localhost:8080/api/client", {
               method: "POST",

@@ -39,7 +39,7 @@ function Connect() {
       navigate("/dashboard0");
     }
     else {
-      const result = await contract.methods.registerProvider(ipWithPort,"IN").send({from: account, value: 1 });
+      const result = await contract.methods.registerProvider(ipWithPort,"IN").send({from: account, value: stake });
       navigate("/dashboard0");
     }
   

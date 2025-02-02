@@ -79,12 +79,12 @@ function Dashboard0() {
           {/* <a href="http://localhost:8080/api/server">Download</a> */}
           {/* <p onClick={}>Download</p> */}
           <div className='div'>
-            <p>Download you server binary</p>
+            <p>Download your server binary</p>
           <button className='download' onClick={downloadFile}>Download File</button>
             </div>
           <button className='btn' onClick={withdraw}>Withdraw</button>
     </div>
   )
 }
-
+  
 export default Dashboard0
